@@ -1,6 +1,7 @@
 import '../CSS/option.css'
 const Option = ({ option, currentIndex, clickedOption, selectedOption, currectAnswer }) => {
   return (
+    <div className='option'>
     <div className={
       currentIndex === currectAnswer
         ? "green"
@@ -9,6 +10,7 @@ const Option = ({ option, currentIndex, clickedOption, selectedOption, currectAn
           : null
     }
       onClick={() => clickedOption(currentIndex)}><p>{option}</p></div>
+      </div>
   )
 }
 export default Option
